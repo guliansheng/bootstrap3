@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">	
+	<script type="text/javascript" src='bs/js/jquery.js'></script>
+	<script type="text/javascript" src='bs/js/bootstrap.js'></script>
+</head>
+<body>
+<div class="container">
+	<h1>模态框</h1>
+	<hr>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg smodal" data-target="#myModal">
+	  Launch demo modal
+	</button>
+	<!-- Modal模态框内容 -->
+	<div class="modal fade" id="myModal"><!-- fade类是模态框淡入淡出动画类 -->
+	<!-- 模态框的尺寸:在.modal-dialog后面添加modal-lg或者modal-sm分别表示大和小，不添加则是默认中等大小 -->
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <div class="modal-header"><!-- 头部 -->
+	        <button type="button" class="close hmodal"><span>&times;</span></button><!-- 关闭符号 -->
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body"><!-- 体部 -->
+	        Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !Linux is very good !
+	      </div>
+	      <div class="modal-footer"><!-- 底部 -->
+	        <button type="button" class="btn btn-default hmodal">Close</button><!-- 关闭按钮 -->
+	        <button type="button" class="btn btn-primary savemodal">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+//关闭和打开模态框方法：.modal('show')和modal('hide'),modal('toggle')打开或关闭;
+$('.smodal').click(function () {
+	$('#myModal').modal('show');
+})
+$('.hmodal').click(function(){
+	$('#myModal').modal('hide');
+})
+//事件：show.bs.modal:show方法调用之前;shown.bs.modal:模态框显示出来之后;hide.bs.modal:hide方法调用之前;hiden.bs.modal:模态框隐藏之后;
+$('#myModal').on('hidden.bs.modal', function () {
+	$('body').css({'background':'#ccc'});	
+})
+
+</script>
+</html>

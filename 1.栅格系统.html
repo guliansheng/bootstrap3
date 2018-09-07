@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bs/css/bootstrap.css">
+	<script src='bs/js/jquery.js'></script>
+	<script src='bs/js/bootstrap.js'></script>
+	<style type="text/css">
+		*{
+			font-family: 微软雅黑;
+		}
+		.col-sm-4{
+			background: #f0f;
+		}
+		.col-sm-6{
+			background: #ff0;
+		}
+		.col-sm-9{
+			background: #0ff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>栅格系统中的列有内边距padding=15px;</h3>
+		<hr>
+		<div class="row">
+			  <div class="col-sm-4">.col-sm-4</div>
+			  <div class="col-sm-4 col-sm-offset-4">.col-sm-4 .col-sm-offset-4</div>
+		</div>
+		<div class="row">
+			  <div class="col-sm-3 col-sm-offset-3">.col-sm-3 .col-sm-offset-3</div>
+			  <div class="col-sm-3 col-sm-offset-3">.col-sm-3 .col-sm-offset-3</div>
+		</div>
+		<div class="row">
+			  <div class="col-sm-9 col-sm-offset-3">.col-sm-8 .col-sm-offset-3</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="col-sm-4">1</div>
+				<div class="col-sm-4">2</div>
+				<div class="col-sm-4">3</div>
+			</div>
+			<div class="col-sm-6">4</div>
+		</div>
+	</div>
+</body>
+</html>
